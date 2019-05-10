@@ -1,7 +1,15 @@
 import java.util.List;
 import java.io.FileNotFoundException;
 import java.util.Arrays;
-
+import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+import javax.swing.*;
 
 
 public class kNNMain{
@@ -11,13 +19,20 @@ public class kNNMain{
     // TASK 1: Use command line arguments to point DataSet.readDataSet method to
     // the desired file. Choose a given DataPoint, and print its features and label
 
+DataSet dataset = new DataSet();
+List<DataPoint> Data = DataSet.readDataSet("/Users/pragnapatel/w19-360420-machine-learning/data/iris.csv");
+DataPoint point = Data.get(6);
 
+double [] values = point.getX();
+String val = Arrays.toString(values);
+
+String label = point.getLabel();
+System.out.printf ("/n label"+label + "/n values"+ val);
 
     //TASK 2:Use the DataSet class to split the fullDataSet into Training and Held Out Test Dataset
 
 
-    // TASK 3: Use the DataSet class methods to plot the 2D data (binary and multi-class)
-
+    
 
 
     // TASK 4: write a new method in DataSet.java which takes as arguments to DataPoint objects,
