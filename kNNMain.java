@@ -55,8 +55,8 @@ public class kNNMain{
     // TASK 5: Use the KNNClassifier class to determine the k nearest neighbors to a given DataPoint,
     // and make a print a predicted target label
      
-    // KNNClassifier near = new KNNClassifier (4) ;
-     //String predict = near.predict(Data,point) ;
+     KNNClassifier near = new KNNClassifier (4) ;
+     String predict = near.predict(Data,point) ;
      //System.out.println (predict);
 
     // TASK 6: loop over the datapoints in the held out test set, and make predictions for Each
