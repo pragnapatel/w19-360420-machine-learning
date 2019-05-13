@@ -251,6 +251,28 @@ public class DataSet {
   // TASK 4: make a method here called distanceEuclid 
 
   ////////////////////////////////////////////////////////////////////////////
+public static double distanceEuclid (DataPoint x, DataPoint y){
 
-
+	double distanceEuclid = 0.;
+	double sum = 0.;
+    double[]w = x.getX();
+    double[]z = y.getX();
+    
+    String Printw =Arrays.toString (w);
+    System.out.println (Printw);
+    String Printz =Arrays.toString (z);
+    System.out.println (Printz);
+    
+    
+    for ( int i = 1; i < w.length ; i++){
+     sum += Math.pow ((w[i] -z[i]),2);
+     }
+     
+     //System.out.println ("sum = " + sum);
+     distanceEuclid = Math.sqrt (sum);
+     //System.out.println("distanceEuclid = " + distanceEuclid);
+     return  Math.sqrt (sum);
+    
+    
+ }
 }
