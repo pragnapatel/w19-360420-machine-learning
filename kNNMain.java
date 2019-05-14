@@ -19,6 +19,10 @@ public class kNNMain{
     // TASK 1: Use command line arguments to point DataSet.readDataSet method to
     // the desired file. Choose a given DataPoint, and print its features and label
 
+
+double [] array =  new double [1000] ;
+for ( int a = 0; a < array.length; a ++)
+{
 	DataSet dataset = new DataSet();
 	List<DataPoint> Data = DataSet.readDataSet("/Users/pragnapatel/w19-360420-machine-learning/data/breastCancer.csv");
 	DataPoint point = Data.get(6);
@@ -76,9 +80,20 @@ public class kNNMain{
 	  d++;
 	}
 	double percentage = (c/d)* 100 ;
-	  System.out.println ("Numnber of predictions = " + c);
-	  System.out.println ("Numnber of iterations = " + d);
-	  System.out.println ("Accuracy = " + percentage);
+	array[a] = percentage ;
+	  //System.out.println ("Numnber of iterations = " + array[a]);
+	  //System.out.println ("Accuracy = " + percentage);
+	  //System.out.println ("");
+	  
+	
+	  }
+	  
+	double mean = mean(array);
+	double stand =  standardDeviation(array);
+	System.out.println ("mean" + mean);  
+	System.out.println ("standard of deviation" + stand);
+	  
+	  
 
   }
 
